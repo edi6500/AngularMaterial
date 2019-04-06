@@ -1,0 +1,212 @@
+<button mat-raised-button>Hello world</button>
+<hr>
+
+<div class="mat-display-4">this is display 4</div>
+<div class="mat-display-3">this is display 3</div>
+<div class="mat-display-2">this is display 2</div>
+<div class="mat-display-1">this is display 1</div>
+<hr>
+
+<div class="mat-headline">This is a heading for h1</div>
+<div class="mat-title">This is a heading for h2</div>
+<div class="mat-subheading-2">This is a heading for h3</div>
+<div class="mat-subheading-1">This is a heading for h4</div>
+<hr>
+
+<div class="mat-body-1">This is body text</div>
+<div class="mat-body-2">This is boldy text</div>
+<div class="mat-caption">This is caption text</div>
+<hr>
+
+<div class="mat-typography">
+  <h1>This is a heading for h1</h1>
+  <h2>This is a heading for h2</h2>
+  <h3>This is a heading for h3</h3>
+  <h4>This is a heading for h4</h4>
+</div>
+
+<div>
+  <button mat-button>Click me!</button>
+  <button mat-raised-button>Click me!</button>
+  <button mat-flat-button>Click me!</button>
+  <button mat-stroked-button>Click me!</button>
+</div>
+
+<div>
+  <button mat-icon-button>Icon</button>
+  <button mat-fab>Icon</button>
+  <button mat-mini-fab></button>
+</div>
+
+<div>
+  <button color="primary" mat-icon-button>Primary</button>
+  <button color="accent" mat-fab>accent</button>
+  <button color="warn" disableRipple mat-mini-fab>warn</button>
+  <button color="primary" mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>accent</button>
+  <button color="warn" mat-raised-button>warn</button>
+</div>
+
+<div>
+  <mat-button-toggle>Toggle</mat-button-toggle>
+</div>
+
+<div>
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{toggleGroup.value}}
+</div>
+
+<div>
+  <mat-icon color="primary">build</mat-icon>
+</div>
+
+<div>
+  <span [matBadge]="notifications" matBadgeOverlap="false" [matBadgeHidden]="notifications === 0">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="below before" matBadgeSize="small" matBadgeOverlap="false">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="below after" matBadgeSize="medium" matBadgeOverlap="false">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="above after" matBadgeSize="large" matBadgeOverlap="false">Notifications</span>
+</div>
+
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<button (click)="loadData()">Load data</button>
+
+<mat-toolbar color="primary" class="navbar">
+  <div>Codevolution</div>
+  <div>
+    <span>Home</span>
+    <span>About</span>
+    <span>Services</span>
+  </div>
+</mat-toolbar>
+
+<!-- sidebar -->
+
+<mat-sidenav-container>
+  <mat-sidenav mode="push" [(opened)]="opened">Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main
+    <button (click)="opened=!opened">Toggle Opened</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- menu -->
+<mat-menu #appMenu="matMenu" xPosition="after"yPosition="above">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+  <button mat-menu-item>backend</button>
+</mat-menu>
+
+<button mat-falt-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<!-- list -->
+
+<mat-list dense>
+  <mat-list-item>Item 1</mat-list-item>
+  <mat-list-item>Item 2</mat-list-item>
+  <mat-list-item>Item 3</mat-list-item>
+</mat-list>
+
+<mat-nav-list>
+  <a mat-list-item href="#">Home</a>
+  <a mat-list-item href="#">About</a>
+  <a mat-list-item href="#">Service</a>
+</mat-nav-list>
+
+<mat-list>
+  <mat-list-item>
+    <mat-icon>home</mat-icon>
+    <h3 matLine>Heading</h3>
+    <p matLine>Line</p>
+  </mat-list-item>
+</mat-list>
+<!-- grid -->
+<mat-grid-list cols="2" rowHeight="100px">
+  <mat-grid-tile>Title 1</mat-grid-tile>
+  <mat-grid-tile>Title 2</mat-grid-tile>
+  <mat-grid-tile>Title 3</mat-grid-tile>
+  <mat-grid-tile>Title 4</mat-grid-tile>
+</mat-grid-list>
+
+<!-- Extention panel -->
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Fundementals
+      </mat-panel-title>
+      <mat-panel-description>
+        total duration : 3 hours
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is tjkdhfjksd mslkdjr ezmlkrjz mzaioerimzr klsdfkl czlehriozut.</p>
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Fundementals
+      </mat-panel-title>
+      <mat-panel-description>
+        total duration : 3 hours
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is tjkdhfjksd mslkdjr ezmlkrjz mzaioerimzr klsdfkl czlehriozut.</p>
+    <mat-action-row>
+      <button mat-button>Enroll</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-card>
+  <mat-card-title>
+    card title
+  </mat-card-title>
+
+  <mat-card-content>
+    this is the card content
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-flat-button>Login</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-tab-group #tabRef>
+  <mat-tab label="angular">Angular content</mat-tab>
+  <mat-tab label="React">React content</mat-tab>
+  <mat-tab label="Vue">Vue content</mat-tab>
+</mat-tab-group>
+<!-- stepper -->
+<mat-horizontal-stepper linear>
+  <mat-step label="Shipping Adress" completed="false">
+    <p>Shipping Adress Details</p>
+  </mat-step>
+
+  <mat-step label="Billing Address" completed=false>
+    <p>Billing Adress Details</p>
+  </mat-step>
+
+  <mat-step label="Place Order" ompleted=false>
+    <p>Order Details</p>
+  </mat-step>
+</mat-horizontal-stepper>
